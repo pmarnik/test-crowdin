@@ -5,7 +5,7 @@ on:
         branches:
             - l10n_branch
     
-    workflow_dispatch
+    workflow_dispatch:
     
 jobs:
   synchronize-with-crowdin:
