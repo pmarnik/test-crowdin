@@ -1,8 +1,8 @@
 name: Crowdin Action
 
 on:
-    - workflow_dispatch
-    - push:
+    workflow_dispatch
+    push:
         branches: [ l10n_branch ]
 
 jobs:
