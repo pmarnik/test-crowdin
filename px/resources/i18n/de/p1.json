@@ -1,6 +1,8 @@
 {
-  "Kill": "Kill",
+  "Kill": "Töten",
   "Hello world": "Hallo Welt",
   "End": "Ende",
-  "Add me": "Add me"
+  "Add me": "Hinzufügen",
+  "Remove me": "entfernen",
+  "Remove": "Löschen"
 }
