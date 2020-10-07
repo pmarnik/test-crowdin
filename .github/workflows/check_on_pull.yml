@@ -1,4 +1,4 @@
-name: Check commits on push
+name: Check commits on pull
 on:
   pull_request:
 
