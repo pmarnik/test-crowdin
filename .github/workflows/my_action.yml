@@ -1,5 +1,5 @@
-name: Check commits on push
-on: [push]
+name: Check commits on pull
+on: [pull]
 
 jobs:
   hello_world_job:
