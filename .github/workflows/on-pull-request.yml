@@ -1,5 +1,5 @@
 name: On new pull request
-on: [pull]
+on: [pull_request]
 
 jobs:
   action:
