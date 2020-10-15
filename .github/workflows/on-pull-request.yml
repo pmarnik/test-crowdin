@@ -15,5 +15,5 @@ jobs:
     - name: dump pull number
       run:  echo ${{ github.event.pull_request.number }}
 
-    # - name: Update references
-    #   uses: pmarnik/jira-issue-ref-action@master
+    - name: Update references
+      uses: pmarnik/jira-issue-ref-action@master
