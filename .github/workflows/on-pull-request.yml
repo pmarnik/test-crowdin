@@ -1,22 +1,15 @@
 name: On new pull request
-on: [pull_request]
+on:
+  pull_request:
+    types: [opened]
 
 jobs:
   action:
     runs-on: ubuntu-latest
     name: Update references
     steps:
-    # - name: Checkout
-    #   uses: actions/checkout@v2
-    #   with:
-    #     fetch-depth: 0
-    - name: dump repo
-      run: echo ${{ github.repository }}
-    - name: dump pull number
-      run:  echo ${{ github.event.pull_request.number }}
-
     - name: Update references
-      uses: pmarnik/jira-issue-ref-action@master
+      uses: pmarnik/jira-issue-ref-action@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-url-pattern: http://onet.pl/
+        issue-url-pattern: http://onet.pl/234/{issue_key}
